@@ -1,0 +1,22 @@
+{
+  "parser": "vue-eslint-parser",
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+    "extends": [
+      // "plugin:prettier/recommended"
+      "eslint:recommended"
+    ],
+  
+    // "plugins": ["prettier"],
+  
+    "rules": {
+      // "prettier/prettier": "error"
+    }
+  }
