@@ -20,6 +20,12 @@ mongoose.connect(process.env.DB_URI, {
     useUnifiedTopology: true
 }).then(()=>console.log("DB Connected")).catch(err=>console.log(err));
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static(__dirname+"/dist"));
+    app.get('*', (req, res)=>{
+        res.sendFile(__dirname+"/dist/index.html")
+    })
+}
 //routes prefix
 app.use("/api", require("../server/routes/routes"));
 
