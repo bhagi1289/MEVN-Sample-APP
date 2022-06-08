@@ -19,13 +19,13 @@ let upload = multer({
 }).single('image');
 
 
-router.get("/", API.fetchAllPost);
+router.get("/post", API.fetchAllPost);
 
-router.get("/:id", API.fetchPostById);
+router.get("/post/:id", API.fetchPostById);
 
-router.post("/", upload, API.createPost);
+router.post("/post", upload, API.createPost);
 
-router.patch("/:id", upload, API.updatePostById);
+router.patch("/post/:id", upload, API.updatePostById);
 
-router.delete("/:id", API.deletePost);
+router.delete("/post/:id", API.deletePost);
 module.exports = router;
